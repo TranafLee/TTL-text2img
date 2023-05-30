@@ -5,7 +5,7 @@ import os
 import numpy as np
 import torch as th
 import torchvision.transforms as T
-from tqdm import tqdm
+from tqdm import trange
 
 from glide_finetune.glide_finetune import run_glide_finetune_epoch
 from glide_finetune.glide_util import load_model
@@ -161,7 +161,7 @@ def run_glide_finetune(
 
     os.makedirs(current_run_ckpt_dir, exist_ok=True)
 
-    for epoch in tqdm(range(num_epochs)):
+    for epoch in trange(num_epochs):
         print(f"Starting epoch {epoch}")
         run_glide_finetune_epoch(
             glide_model=glide_model,
