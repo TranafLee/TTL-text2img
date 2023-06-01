@@ -313,7 +313,7 @@ if __name__ == "__main__":
         data_dir = args.data_dir
     
     run_glide_finetune(
-        data_dir='/kaggle/input/diffusion-db-1k/data1k',
+        data_dir=args.data_dir,
         batch_size=args.batch_size,
         learning_rate=args.learning_rate,
         adam_weight_decay=args.adam_weight_decay,
