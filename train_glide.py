@@ -15,7 +15,7 @@ from glide_finetune.wds_loader import glide_wds_loader
 
 
 def run_glide_finetune(
-    data_dir="/kaggle/input/diffusion-db",
+    data_dir="./data",
     batch_size=1,
     learning_rate=1e-5,
     adam_weight_decay=0.0,
@@ -24,7 +24,7 @@ def run_glide_finetune(
     resize_ratio=1.0,
     uncond_p=0.0,
     resume_ckpt="",
-    checkpoints_dir="/kaggle/working/finetune_checkpoints",
+    checkpoints_dir="./finetune_checkpoints",
     use_fp16=False,  # Tends to cause issues,not sure why as the paper states fp16 is stable.
     device="cpu",
     freeze_transformer=False,
@@ -144,7 +144,7 @@ def run_glide_finetune(
 
 
     # Training setup
-    outputs_dir = "/kaggle/working/outputs"
+    outputs_dir = "./outputs"
     os.makedirs(outputs_dir, exist_ok=True)
 
     existing_runs = [ sub_dir for sub_dir in os.listdir(checkpoints_dir) if os.path.isdir(os.path.join(checkpoints_dir, sub_dir))]
@@ -187,7 +187,7 @@ def run_glide_finetune(
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", "-data", type=str, default="/kaggle/input/diffusion-db")
+    parser.add_argument("--data_dir", "-data", type=str, default="./data")
     parser.add_argument("--batch_size", "-bs", type=int, default=1)
     parser.add_argument("--learning_rate", "-lr", type=float, default=2e-5)
     parser.add_argument("--adam_weight_decay", "-adam_wd", type=float, default=0.0)
@@ -217,7 +217,7 @@ def parse_args():
         help="Checkpoint to resume from",
     )
     parser.add_argument(
-        "--checkpoints_dir", "-ckpt", type=str, default="/kaggle/working/glide_checkpoints/"
+        "--checkpoints_dir", "-ckpt", type=str, default="./glide_checkpoints/"
     )
     parser.add_argument("--use_fp16", "-fp16", action="store_true")
     parser.add_argument("--device", "-dev", type=str, default="")
