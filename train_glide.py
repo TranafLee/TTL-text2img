@@ -42,7 +42,7 @@ def run_glide_finetune(
     caption_key="txt",
     enable_upsample=False,
     upsample_factor=4,
-    image_to_upsample='low_res_face.png',
+    image_to_upsample='./low_res_face.png',
 ):
     if "~" in data_dir:
         data_dir = os.path.expanduser(data_dir)
@@ -285,7 +285,7 @@ def parse_args():
     parser.add_argument(
         "--upscale_factor", "-upscale", type=int, default=4, help="Upscale factor for training the upsampling model only"
     )
-    parser.add_argument("--image_to_upsample", "-lowres", type=str, default="low_res_face.png")
+    parser.add_argument("--image_to_upsample", "-lowres", type=str, default="./low_res_face.png")
     args = parser.parse_args()
 
     return args
