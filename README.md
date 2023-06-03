@@ -43,7 +43,7 @@ python train.py \
 python train.py \
   --data_dir '/userdir/data/mscoco' \
   --train_upsample True \
-  --image_to_upsample 'low_res_face.png'
+  --image_to_upsample './images/low_res_img.png' \
   --upscale_factor 4 \
   --side_x 64 \
   --side_y 64 \

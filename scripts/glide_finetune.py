@@ -99,7 +99,7 @@ def run_glide_finetune_epoch(
     epoch: int = 0,
     train_upsample: bool = False,
     upsample_factor=4,
-    image_to_upsample='low_res_face.png',
+    image_to_upsample='./images/low_res_img.png',
 ):
     if train_upsample: train_step = upsample_train_step
     else: train_step = base_train_step

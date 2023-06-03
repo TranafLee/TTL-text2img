@@ -8,3 +8,4 @@ outputs/
 wandb/
 finetune_checkpoints/
 docker_child/
+.DS_Store

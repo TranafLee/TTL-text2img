@@ -42,7 +42,7 @@ def run_glide_finetune(
     caption_key="txt",
     enable_upsample=False,
     upsample_factor=4,
-    image_to_upsample='low_res_face.png',
+    image_to_upsample='./images/low_res_img.png',
 ):
     if "~" in data_dir:
         data_dir = os.path.expanduser(data_dir)
