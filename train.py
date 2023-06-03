@@ -289,7 +289,7 @@ if __name__ == "__main__":
         data_dir = glob(os.path.join(args.data_dir, "*.tar"))
     
     run_glide_finetune(
-        data_dir='/content/drive/MyDrive/itE10-se6/project2/data1k',
+        data_dir=args.data_dir,
         batch_size=args.batch_size,
         learning_rate=args.learning_rate,
         adam_weight_decay=args.adam_weight_decay,
