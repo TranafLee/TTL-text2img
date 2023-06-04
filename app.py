@@ -181,7 +181,7 @@ def to_base64(pil_image):
 
 title = "Demo: TTL-text2img"
 description = "Photorealistic Image Generation and Editing with Text-Guided Diffusion Models."
-article = "<p style='text-align: center'><a href='https://arxiv.org/abs/2112.10741'>GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models</a> | <a href='https://github.com/openai/glide-text2im/'>Official Repo</a></p>"
+article = "<p style='text-align: center'> TTL-text2img | <a href='https://github.com/TranafLee/TTL-text2img/'>Github Repo</a></p>"
 examples =["an oil painting of a lavender"]
 
 iface = gr.Interface(fn=sample, 
