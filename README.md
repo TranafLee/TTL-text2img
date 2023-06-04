@@ -83,3 +83,7 @@ usage: train.py [-h]
                 [--cudnn_benchmark] 
                 [--upscale_factor UPSCALE_FACTOR]
 ```
+
+# Reference
+[OpenAI/glide-text2im](https://github.com/openai/glide-text2im)
+[OpenAI/guided-diffusion](https://github.com/openai/guided-diffusion)
