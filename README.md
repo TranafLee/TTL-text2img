@@ -1,6 +1,7 @@
 # TTL text2img
 
 Text-to-image generation using diffusion models involves iteratively refining images based on textual descriptions. This approach gradually enhances image quality, ensuring coherence with the given text. It enables the generation of visually appealing and contextually relevant images that accurately represent the textual input.
+Demo in `huggingface`: [TTL-text2img](https://huggingface.co/spaces/ttranaflee/TTL-text2img)
 
 # Installation
 Instructions on how to install and set up TTL-text2img
