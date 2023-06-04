@@ -179,17 +179,16 @@ def to_base64(pil_image):
     pil_image.save(buffered, format="JPEG")
     return base64.b64encode(buffered.getvalue())
 
-title = "Interactive demo: glide-text2im"
-description = "Demo for OpenAI's GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models."
+title = "Demo: TTL-text2img"
+description = "Photorealistic Image Generation and Editing with Text-Guided Diffusion Models."
 article = "<p style='text-align: center'><a href='https://arxiv.org/abs/2112.10741'>GLIDE: Towards Photorealistic Image Generation and Editing with Text-Guided Diffusion Models</a> | <a href='https://github.com/openai/glide-text2im/'>Official Repo</a></p>"
-examples =["an oil painting of a corgi"]
+examples =["an oil painting of a lavender"]
 
 iface = gr.Interface(fn=sample, 
                      inputs=gr.inputs.Textbox(label='What would you like to see?'), 
                      outputs=gr.outputs.Image(type="pil", label="Model input + completions"),
                      title=title,
-                     description=description,
                      article=article,
                      examples=examples,
                      enable_queue=True)
-iface.launch(debug=True)
+iface.launch(debug=True, share=True)
