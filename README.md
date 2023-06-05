@@ -1,6 +1,6 @@
 # TTL text2img
 
-Text-to-image generation using diffusion models involves iteratively refining images based on textual descriptions. This approach gradually enhances image quality, ensuring coherence with the given text. It enables the generation of visually appealing and contextually relevant images that accurately represent the textual input.
+Text-to-image generation using diffusion models involves iteratively refining images based on textual descriptions. This approach gradually enhances image quality, ensuring coherence with the given text. It enables the generation of visually appealing and contextually relevant images that accurately represent the textual input. <br />
 Demo in `huggingface`: [TTL-text2img](https://huggingface.co/spaces/ttranaflee/TTL-text2img)
 
 # Installation
@@ -86,5 +86,5 @@ usage: train.py [-h]
 ```
 
 # Reference
-[OpenAI/glide-text2im](https://github.com/openai/glide-text2im)
+[OpenAI/glide-text2im](https://github.com/openai/glide-text2im) <br />
 [OpenAI/guided-diffusion](https://github.com/openai/guided-diffusion)
